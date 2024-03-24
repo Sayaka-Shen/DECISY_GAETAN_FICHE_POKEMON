@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac2f5de17d1f2a43ae3e7cf9aacd524, type: 3}
+  m_Name: PokemonDataBase
+  m_EditorClassIdentifier: 
+  datas:
+  - name: Pikachu
+    pokeInfo:
+      idPoke: 0
+      size: 0.4
+      weight: 6
+      type: Electrique
+      caption: 'Pikachu was designed around the concept of electricity. They are
+        creatures that have short, yellow fur with brown markings covering their
+        backs and parts of their lightning bolt-shaped tails. They have black-tipped,
+        pointed ears and red circular pouches on their cheeks, which can spark with
+        electricity. '
+    icon: {fileID: 21300000, guid: c554b4f191942e3438b6cfa853ee97af, type: 3}
+    statsBase:
+      pv: 35
+      atk: 55
+      def: 40
+      atkSpe: 50
+      defSpe: 50
+      speed: 90
+  - name: Bulbizare
+    pokeInfo:
+      idPoke: 1
+      size: 0.7
+      weight: 6.9
+      type: Plante-Poison
+      caption: "In the Pok\xE9mon franchise, Bulbasaur are small, squat amphibian
+        and plant Pok\xE9mon that move on all four legs, and have blue-green bodies
+        with darker blue-green spots. As a Bulbasaur undergoes evolution into Ivysaur
+        and then later into Venusaur, the bulb on its back blossoms into a large
+        flower."
+    icon: {fileID: 21300000, guid: 3e9f2d88b5661ba4f947cc02c54c4906, type: 3}
+    statsBase:
+      pv: 45
+      atk: 49
+      def: 49
+      atkSpe: 65
+      defSpe: 65
+      speed: 45
+  - name: Rondoudou
+    pokeInfo:
+      idPoke: 2
+      size: 0.5
+      weight: 5.5
+      type: Normal-Fee
+      caption: 'Jigglypuff are characterized by putting their enemies to sleep by
+        singing a lullaby. Before beginning to sing, they mesmerize the opponent
+        with their soft, glowing eyes and, if they inflate themselves, they can sing
+        for longer periods of time. '
+    icon: {fileID: 21300000, guid: de3e45163585d504694e403c56211aff, type: 3}
+    statsBase:
+      pv: 115
+      atk: 45
+      def: 20
+      atkSpe: 45
+      defSpe: 25
+      speed: 20
+  - name: "Salam\xE8che"
+    pokeInfo:
+      idPoke: 3
+      size: 0.6
+      weight: 8.5
+      type: Feu
+      caption: "Charmander is a small, bipedal, lizard-like Pok\xE9mon. Most of its
+        body is colored orange, while its underbelly is a light yellow color. Charmander,
+        along with all of its evolved forms, has a flame that is constantly burning
+        on the end of its tail."
+    icon: {fileID: 21300000, guid: 377056e693d65ab41aff22a8d9f957d3, type: 3}
+    statsBase:
+      pv: 39
+      atk: 52
+      def: 43
+      atkSpe: 60
+      defSpe: 50
+      speed: 65
+  - name: Carapuce
+    pokeInfo:
+      idPoke: 4
+      size: 0.5
+      weight: 9
+      type: Eau
+      caption: "Squirtle is a small, light-blue Pok\xE9mon with an appearance similar
+        to a turtle. With its aerodynamic shape and grooved surface, Squirtle's shell
+        helps it wade through the water very quickly. It also offers protection in
+        battle."
+    icon: {fileID: 21300000, guid: 9556ad205dfd4924d80e12a168036c3d, type: 3}
+    statsBase:
+      pv: 44
+      atk: 48
+      def: 65
+      atkSpe: 50
+      defSpe: 64
+      speed: 43
+  - name: Roucool
+    pokeInfo:
+      idPoke: 5
+      size: 0.3
+      weight: 1.8
+      type: Normal-Vol
+      caption: "Pidgey, the Tiny Bird Pok\xE9mon. A Normal and Flying type. Pidgey
+        usually doesn't like to battle, but it won't hesitate to attack if provoked."
+    icon: {fileID: 21300000, guid: 3d64cb36b4550774dafd29f38ebd0001, type: 3}
+    statsBase:
+      pv: 40
+      atk: 45
+      def: 40
+      atkSpe: 35
+      defSpe: 35
+      speed: 56
+  - name: Rattata
+    pokeInfo:
+      idPoke: 6
+      size: 0.3
+      weight: 3.5
+      type: Normal
+      caption: "Rattata is a small, quadrupedal rodent Pok\xE9mon. It has purple
+        fur with a cream-colored face, paws, and underbelly."
+    icon: {fileID: 21300000, guid: 1311677df2e12b849a2df549e605d8be, type: 3}
+    statsBase:
+      pv: 30
+      atk: 56
+      def: 35
+      atkSpe: 25
+      defSpe: 35
+      speed: 72
+  - name: Miaouss
+    pokeInfo:
+      idPoke: 7
+      size: 0.4
+      weight: 4.2
+      type: Normal
+      caption: "These daring Pok\xE9mon have coins on their foreheads. Darker coins
+        are harder, and harder coins garner more respect among Meowth. Living with
+        a savage, seafaring people has toughened this Pok\xE9mon's body so much that
+        parts of it have turned to iron."
+    icon: {fileID: 21300000, guid: ef14fcba645ff704e93fc321db1de14b, type: 3}
+    statsBase:
+      pv: 40
+      atk: 45
+      def: 35
+      atkSpe: 40
+      defSpe: 40
+      speed: 90
+  - name: Racaillou
+    pokeInfo:
+      idPoke: 8
+      size: 0.4
+      weight: 20
+      type: Roche-Sol
+      caption: "Geodude is a dual-type Rock/Ground Pok\xE9mon. It evolves into Graveler
+        starting at level 25, which evolves into Golem starting at level 35. In Alola,
+        Geodude has a dual-type Rock/Electric regional form. It evolves into Alolan
+        Graveler starting at level 25, which evolves into Alolan Golem starting at
+        level 35."
+    icon: {fileID: 21300000, guid: 9c52a514f29f98445bf899af282e605b, type: 3}
+    statsBase:
+      pv: 40
+      atk: 80
+      def: 100
+      atkSpe: 30
+      defSpe: 30
+      speed: 20
+  - name: Ramoloss
+    pokeInfo:
+      idPoke: 9
+      size: 1.2
+      weight: 36
+      type: Eau-Psy
+      caption: It is incredibly slow and dopey. It takes five seconds for it to feel
+        pain when under attack. It uses its tail to fish, but the scent of the spice
+        emanating from its tail ensures its catches are always lacking.
+    icon: {fileID: 21300000, guid: 962487af1031d4242803cb90899db9f3, type: 3}
+    statsBase:
+      pv: 90
+      atk: 65
+      def: 65
+      atkSpe: 40
+      defSpe: 40
+      speed: 15
