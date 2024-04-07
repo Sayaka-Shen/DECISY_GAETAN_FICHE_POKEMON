@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d479eb8205566ef48871e3af667a06d0, type: 3}
+  m_Name: AttackDatabase
+  m_EditorClassIdentifier: 
+  datas:
+  - name: Charge
+    caption: Le lanceur charge la cible et la percute de tout son poids.
+    category: 0
+    types: 1
+    degat: 40
+  - name: Griffe
+    caption: "Lac\xE8re la cible avec des griffes ac\xE9r\xE9es pour lui infliger
+      des d\xE9g\xE2ts."
+    category: 0
+    types: 1
+    degat: 40
+  - name: Hydro-Queue
+    caption: "Le lanceur remue son adorable queue pour tromper la vigilance de la
+      cible et baisser sa D\xE9fense."
+    category: 0
+    types: 11
+    degat: 90
+  - name: Vive-Attaque
+    caption: "Vive-Attaque est une Attaque Imm\xE9diate de type NORMAL. Lorsqu'elle
+      est utilis\xE9e dans un combat d'Ar\xE8ne ou de Raid, sa puissance est de 8
+      et sa dur\xE9e est de 0.8 secondes. De plus, l'utiliser remplit la jauge d'\xE9nergie
+      de 10 points, avec un maximum de 100 points d'\xE9nergie."
+    category: 0
+    types: 1
+    degat: 40
+  - name: Eclair
+    caption: "Une d\xE9charge \xE9lectrique tombe sur la cible, ce qui peut aussi
+      la paralyser."
+    category: 1
+    types: 13
+    degat: 40
+  - name: Bluff
+    caption: "Le lanceur frappe en priorit\xE9 et apeure la cible. La capacit\xE9
+      ne fonctionne que si elle est utilis\xE9e imm\xE9diatement en entrant au combat.\r\n"
+    category: 0
+    types: 1
+    degat: 40
+  - name: Roulade
+    caption: "Un rocher roule sur la cible pendant cinq tours. L\u2019attaque gagne
+      en puissance \xE0 chaque coup.\r"
+    category: 0
+    types: 6
+    degat: 40
+  - name: Point Eclair
+    caption: "Un coup de poing \xE9lectrique vient frapper la cible, ce qui peut
+      la paralyser."
+    category: 0
+    types: 13
+    degat: 75
+  - name: Morsure
+    caption: Attaque "Croc". 30% de chance d'apeurer la cible.
+    category: 0
+    types: 17
+    degat: 60
+  - name: Vibraqua
+    caption: Le lanceur projette une aura aquatique sur la cible, et peut la rendre
+      confuse.
+    category: 1
+    types: 11
+    degat: 60
+  - name: Ecras'Face
+    caption: "Le lanceur \xE9crase la cible avec l\u2019un de ses membres, tels qu\u2019une
+      de ses pattes avant ou sa longue queue."
+    category: 0
+    types: 1
+    degat: 40

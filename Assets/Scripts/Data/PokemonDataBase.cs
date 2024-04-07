@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Pokemon", menuName = "DataBase/Pokemon", order = 0)]
@@ -25,7 +22,8 @@ public class PokemonDataBase : ScriptableObject
                 idPoke = 1,
                 size = 0.4f,
                 weight = 30.0f,
-                resType = ,
+                type = "Elektric",
+                resType = "louis", "Feu", "Eau",
                 weakType = ["Jerome", "Feu", "Eau"],
                 caption = "Classified as an Electric-type Pokémon, Raichu is a large brown mouse with " +
                           "a lightning bolt-shaped tail, and yellow sacs on its cheek that can generate " +

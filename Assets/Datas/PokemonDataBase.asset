@@ -13,72 +13,18 @@ MonoBehaviour:
   m_Name: PokemonDataBase
   m_EditorClassIdentifier: 
   datas:
-  - name: Pikachu
-    pokeInfo:
-      idPoke: 0
-      size: 0.4
-      weight: 6
-      type: Electrique
-      caption: 'Pikachu was designed around the concept of electricity. They are
-        creatures that have short, yellow fur with brown markings covering their
-        backs and parts of their lightning bolt-shaped tails. They have black-tipped,
-        pointed ears and red circular pouches on their cheeks, which can spark with
-        electricity. '
-    icon: {fileID: 21300000, guid: c554b4f191942e3438b6cfa853ee97af, type: 3}
-    statsBase:
-      pv: 35
-      atk: 55
-      def: 40
-      atkSpe: 50
-      defSpe: 50
-      speed: 90
-  - name: Bulbizare
+  - name: "Salam\xE8che"
+    caption: "Salam\xE8che est un Pok\xE9mon bip\xE8de et reptilien avec un corps
+      principalement orange, \xE0 l'exception de son ventre et de ses plantes de
+      pieds qui sont beiges. Ses bras et ses jambes sont courts, avec respectivement
+      quatre doigts et trois griffes chacune.Kanto.\r"
     pokeInfo:
       idPoke: 1
-      size: 0.7
-      weight: 6.9
-      type: Plante-Poison
-      caption: "In the Pok\xE9mon franchise, Bulbasaur are small, squat amphibian
-        and plant Pok\xE9mon that move on all four legs, and have blue-green bodies
-        with darker blue-green spots. As a Bulbasaur undergoes evolution into Ivysaur
-        and then later into Venusaur, the bulb on its back blossoms into a large
-        flower."
-    icon: {fileID: 21300000, guid: 3e9f2d88b5661ba4f947cc02c54c4906, type: 3}
-    statsBase:
-      pv: 45
-      atk: 49
-      def: 49
-      atkSpe: 65
-      defSpe: 65
-      speed: 45
-  - name: Rondoudou
-    pokeInfo:
-      idPoke: 2
-      size: 0.5
-      weight: 5.5
-      type: Normal-Fee
-      caption: 'Jigglypuff are characterized by putting their enemies to sleep by
-        singing a lullaby. Before beginning to sing, they mesmerize the opponent
-        with their soft, glowing eyes and, if they inflate themselves, they can sing
-        for longer periods of time. '
-    icon: {fileID: 21300000, guid: de3e45163585d504694e403c56211aff, type: 3}
-    statsBase:
-      pv: 115
-      atk: 45
-      def: 20
-      atkSpe: 45
-      defSpe: 25
-      speed: 20
-  - name: "Salam\xE8che"
-    pokeInfo:
-      idPoke: 3
       size: 0.6
       weight: 8.5
-      type: Feu
-      caption: "Charmander is a small, bipedal, lizard-like Pok\xE9mon. Most of its
-        body is colored orange, while its underbelly is a light yellow color. Charmander,
-        along with all of its evolved forms, has a flame that is constantly burning
-        on the end of its tail."
+      category: "Pok\xE9mon L\xE9zard"
+      types: 0a000000
+      isSelected: 1
     icon: {fileID: 21300000, guid: 377056e693d65ab41aff22a8d9f957d3, type: 3}
     statsBase:
       pv: 39
@@ -87,16 +33,21 @@ MonoBehaviour:
       atkSpe: 60
       defSpe: 50
       speed: 65
+    attacks:
+    - name: Griffe
+      level: 0
   - name: Carapuce
+    caption: "Carapuce est une petite tortue bip\xE8de de couleur bleue. Il poss\xE8de
+      une carapace brune au pourtour blanc, beige au niveau du ventre. Ses yeux sont
+      grands et violac\xE9s. Il a une queue enroul\xE9e sur elle-m\xEAme formant
+      une spirale."
     pokeInfo:
-      idPoke: 4
+      idPoke: 2
       size: 0.5
       weight: 9
-      type: Eau
-      caption: "Squirtle is a small, light-blue Pok\xE9mon with an appearance similar
-        to a turtle. With its aerodynamic shape and grooved surface, Squirtle's shell
-        helps it wade through the water very quickly. It also offers protection in
-        battle."
+      category: "Pok\xE9mon Minitortue"
+      types: 0b000000
+      isSelected: 1
     icon: {fileID: 21300000, guid: 9556ad205dfd4924d80e12a168036c3d, type: 3}
     statsBase:
       pv: 44
@@ -105,14 +56,21 @@ MonoBehaviour:
       atkSpe: 50
       defSpe: 64
       speed: 43
+    attacks:
+    - name: Hydro-Queue
+      level: 0
   - name: Roucool
+    caption: "Carapuce est une petite tortue bip\xE8de de couleur bleue. Il poss\xE8de
+      une carapace brune au pourtour blanc, beige au niveau du ventre. Ses yeux sont
+      grands et violac\xE9s. Il a une queue enroul\xE9e sur elle-m\xEAme formant
+      une spirale."
     pokeInfo:
-      idPoke: 5
+      idPoke: 3
       size: 0.3
       weight: 1.8
-      type: Normal-Vol
-      caption: "Pidgey, the Tiny Bird Pok\xE9mon. A Normal and Flying type. Pidgey
-        usually doesn't like to battle, but it won't hesitate to attack if provoked."
+      category: "Pok\xE9mon Minioiseau"
+      types: 01000000
+      isSelected: 1
     icon: {fileID: 21300000, guid: 3d64cb36b4550774dafd29f38ebd0001, type: 3}
     statsBase:
       pv: 40
@@ -121,32 +79,45 @@ MonoBehaviour:
       atkSpe: 35
       defSpe: 35
       speed: 56
-  - name: Rattata
+    attacks:
+    - name: Vive-Attaque
+      level: 0
+  - name: Pikachu
+    caption: "Pikachu est le Pok\xE9mon Souris (n\xB0 25 au Pok\xE9dex National).
+      C' est le premier et le plus c\xE9l\xE8bre de tous les Pok\xE9mon. Il est de
+      la premi\xE8re g\xE9n\xE9ration (Kanto) et il mesure 40 cm et p\xE8se 6 kg.
+      Il est le fid\xE8le compagnon de Sacha dans la s\xE9rie anim\xE9e, il est aussi
+      la mascotte de Pok\xE9mon.\r"
     pokeInfo:
-      idPoke: 6
-      size: 0.3
-      weight: 3.5
-      type: Normal
-      caption: "Rattata is a small, quadrupedal rodent Pok\xE9mon. It has purple
-        fur with a cream-colored face, paws, and underbelly."
-    icon: {fileID: 21300000, guid: 1311677df2e12b849a2df549e605d8be, type: 3}
+      idPoke: 4
+      size: 0.6
+      weight: 6
+      category: "Pok\xE9mon Souris"
+      types: 0d000000
+      isSelected: 1
+    icon: {fileID: 21300000, guid: c554b4f191942e3438b6cfa853ee97af, type: 3}
     statsBase:
-      pv: 30
-      atk: 56
-      def: 35
-      atkSpe: 25
-      defSpe: 35
-      speed: 72
+      pv: 35
+      atk: 55
+      def: 40
+      atkSpe: 50
+      defSpe: 50
+      speed: 90
+    attacks:
+    - name: Eclair
+      level: 0
   - name: Miaouss
+    caption: "Miaouss (Meowth en anglais et \u30CB\u30E3\u30FC\u30B9 en japonais)
+      est un Pok\xE9mon de la 1\xE8re g\xE9n\xE9ration de type normal. Il est majoritairement
+      de couleur Jaune. Il mesure 0.4 m (1.31 pieds) et p\xE8se 4.2 kg (9.26 livres).
+      Il fait partie de la cat\xE9gorie des Pok\xE9mon Chad\xE9gout.\r"
     pokeInfo:
-      idPoke: 7
+      idPoke: 5
       size: 0.4
       weight: 4.2
-      type: Normal
-      caption: "These daring Pok\xE9mon have coins on their foreheads. Darker coins
-        are harder, and harder coins garner more respect among Meowth. Living with
-        a savage, seafaring people has toughened this Pok\xE9mon's body so much that
-        parts of it have turned to iron."
+      category: "Pok\xE9mon Chad\xE9gout"
+      types: 01000000
+      isSelected: 1
     icon: {fileID: 21300000, guid: ef14fcba645ff704e93fc321db1de14b, type: 3}
     statsBase:
       pv: 40
@@ -155,17 +126,22 @@ MonoBehaviour:
       atkSpe: 40
       defSpe: 40
       speed: 90
+    attacks:
+    - name: Bluff
+      level: 0
   - name: Racaillou
+    caption: "Racaillou est un Pok\xE9mon form\xE9 de roche. Il poss\xE8de deux bras
+      et n'a pas de pattes. Il peut \xE9galement l\xE9viter, bien que ses types ne
+      le lui permettent pas. Dans L\xE9gendes Pok\xE9mon : Arceus, ce Pok\xE9mon
+      a par d\xE9faut un comportement agressif et attaque le protagoniste d\xE8s
+      qu'il le voit."
     pokeInfo:
-      idPoke: 8
+      idPoke: 6
       size: 0.4
       weight: 20
-      type: Roche-Sol
-      caption: "Geodude is a dual-type Rock/Ground Pok\xE9mon. It evolves into Graveler
-        starting at level 25, which evolves into Golem starting at level 35. In Alola,
-        Geodude has a dual-type Rock/Electric regional form. It evolves into Alolan
-        Graveler starting at level 25, which evolves into Alolan Golem starting at
-        level 35."
+      category: "Pok\xE9mon Roche"
+      types: 06000000
+      isSelected: 1
     icon: {fileID: 21300000, guid: 9c52a514f29f98445bf899af282e605b, type: 3}
     statsBase:
       pv: 40
@@ -174,15 +150,66 @@ MonoBehaviour:
       atkSpe: 30
       defSpe: 30
       speed: 20
+    attacks:
+    - name: Roulade
+      level: 0
+  - name: Raichu
+    caption: "Raichu est un Pok\xE9mon ressemblant \xE0 une souris. Son corps est
+      orange avec un ventre blanc. Il poss\xE8de une longue queue noire avec au bout
+      un \xE9clair jaune."
+    pokeInfo:
+      idPoke: 7
+      size: 0.8
+      weight: 30
+      category: "Pok\xE9mon Souris"
+      types: 06000000
+      isSelected: 1
+    icon: {fileID: 21300000, guid: 3398faf2a3a2ec344868bd5e123b6b86, type: 3}
+    statsBase:
+      pv: 60
+      atk: 90
+      def: 55
+      atkSpe: 90
+      defSpe: 80
+      speed: 110
+    attacks:
+    - name: 'Point Eclair '
+      level: 0
+  - name: Rattata
+    caption: "Rattata ressemble \xE0 un petit rat violet et a l'air agressif. Rattata
+      est de type normal. Le Pok\xE9dex, une encyclop\xE9die Pok\xE9mon fictive,
+      raconte que les Rattata sont de petits rats violets. Ils poss\xE8dent une morsure
+      puissante et peuvent ainsi ronger n'importe quoi.\r"
+    pokeInfo:
+      idPoke: 8
+      size: 0.3
+      weight: 3.5
+      category: "Pok\xE9mon Souris"
+      types: 01000000
+      isSelected: 0
+    icon: {fileID: 21300000, guid: 1311677df2e12b849a2df549e605d8be, type: 3}
+    statsBase:
+      pv: 30
+      atk: 56
+      def: 35
+      atkSpe: 25
+      defSpe: 35
+      speed: 72
+    attacks:
+    - name: Morsure
+      level: 0
   - name: Ramoloss
+    caption: "Rattata ressemble \xE0 un petit rat violet et a l'air agressif. Rattata
+      est de type normal. Le Pok\xE9dex, une encyclop\xE9die Pok\xE9mon fictive,
+      raconte que les Rattata sont de petits rats violets. Ils poss\xE8dent une morsure
+      puissante et peuvent ainsi ronger n'importe quoi.\r"
     pokeInfo:
       idPoke: 9
       size: 1.2
       weight: 36
-      type: Eau-Psy
-      caption: It is incredibly slow and dopey. It takes five seconds for it to feel
-        pain when under attack. It uses its tail to fish, but the scent of the spice
-        emanating from its tail ensures its catches are always lacking.
+      category: "Pok\xE9mon Cr\xE9tin"
+      types: 0b000000
+      isSelected: 0
     icon: {fileID: 21300000, guid: 962487af1031d4242803cb90899db9f3, type: 3}
     statsBase:
       pv: 90
@@ -191,3 +218,29 @@ MonoBehaviour:
       atkSpe: 40
       defSpe: 40
       speed: 15
+    attacks:
+    - name: Vibraqua
+      level: 0
+  - name: Rondoudou
+    caption: "Rondoudou (Jigglypuff en anglais et \u30D7\u30EA\u30F3 en japonais)
+      est un Pok\xE9mon de la 1\xE8re g\xE9n\xE9ration de type normal et fee. Il
+      est majoritairement de couleur Rose. Il mesure 0.5 m (1.64 pieds) et p\xE8se
+      5.5 kg (12.13 livres).\r"
+    pokeInfo:
+      idPoke: 10
+      size: 0.5
+      weight: 5.5
+      category: "Pok\xE9mon Bouboule"
+      types: 01000000
+      isSelected: 0
+    icon: {fileID: 21300000, guid: de3e45163585d504694e403c56211aff, type: 3}
+    statsBase:
+      pv: 115
+      atk: 45
+      def: 20
+      atkSpe: 45
+      defSpe: 25
+      speed: 20
+    attacks:
+    - name: Ecras'Face
+      level: 0

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class PokemonData
+public class PokemonData : BaseData
 {
     [Serializable]
     public struct Stats
@@ -43,35 +43,48 @@ public class PokemonData
         public int idPoke;
         public float size;
         public float weight;
-        public string[] weakType;
-        public string[] resType;
-        public string caption;
+        public string category;
+        public List<TYPES> types;
+        public bool isSelected;
 
-        public Infos(int idPoke, float size, float weight, string[] resType, string[] weakType, string caption)
+        public Infos(int idPoke, float size, float weight, TYPES[] types, string category, bool isSelected)
         {
             this.idPoke = idPoke;
             this.size = size;
             this.weight = weight;
-            this.weakType = weakType;
-            this.resType = resType;
-            this.caption = caption;
+            this.types = new(types);
+            this.category = category;
+            this.isSelected = isSelected;
+        }
+    }
+
+    [Serializable]
+    public struct AttackWrapper
+    {
+        public string name;
+        public int level;
+
+        public AttackWrapper(string name, int level)
+        {
+            this.name = name;
+            this.level = level;
         }
     }
     
-    public string name;
     public Infos pokeInfo;
     public Sprite icon;
     
     public Stats statsBase;
 
-    public PokemonData() { }
+    public List<AttackWrapper> attacks = new();
 
-    public PokemonData(string name, Sprite icon, Infos info, Stats stats)
+    public PokemonData(Sprite icon, Infos info, Stats stats, string name, string caption) : base(name, caption)
     {
         this.name = name;
+        this.caption = caption;
         this.icon = icon;
         this.pokeInfo = info;
-        
+
         this.statsBase = stats;
     }
     
@@ -79,4 +92,10 @@ public class PokemonData
     {
         return new(statsBase, (lvl * evolution / 10));
     }
+
+    /* public override void DisplayName()
+    {
+        Debug.Log("Pokémon : " + name);
+        base.DisplayName();
+    } */
 }

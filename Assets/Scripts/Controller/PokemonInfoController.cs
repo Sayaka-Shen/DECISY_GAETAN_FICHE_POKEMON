@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using System.Data.Common;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = Unity.Mathematics.Random;
 
 public class PokemonInfoController : MonoBehaviour
 {
@@ -22,36 +22,15 @@ public class PokemonInfoController : MonoBehaviour
     [SerializeField] private Text _defSpe;
     [SerializeField] private Text _speed;
 
-    private int currentLife;
-    private int statPoint;
-    
+    [SerializeField] private TextMeshProUGUI choosePoké;
+    [SerializeField] private Canvas fiche;
+    [SerializeField] private Canvas battle;
 
     private int id = 0;
     private PokemonData _data;
+    public List<PokemonData> _pokemonSelected = new();
     
     private DatabaseManager _databaseMgr;
-
-    enum pokeType
-    {
-        Normal, 
-        Feu,    
-        Eau, 
-        Électrik, 
-        Plante, 
-        Glace, 
-        Combat, 
-        Poison, 
-        Sol, 
-        Vol, 
-        Psy, 
-        Insecte, 
-        Roche, 
-        Spectre, 
-        Dragon, 
-        Ténèbres, 
-        Acier, 
-        Fée
-    }
     
     private void Awake()
     {
@@ -63,11 +42,6 @@ public class PokemonInfoController : MonoBehaviour
         _data = _databaseMgr.GetData(id);
 
         UpdateInfo(_data);
-
-        StartCoroutine(DelayAttack());
-        
-        InitCurrentLife(_data);
-        InitStatsPoint(_data);
     }
 
     public void GetNextPokemon()
@@ -88,12 +62,14 @@ public class PokemonInfoController : MonoBehaviour
 
     private void UpdateInfo(PokemonData data)
     {
+        /* data.DisplayName(); */
+        
         _imgIcon.sprite = data.icon;
         _txtName.text = $"Nom : " + data.name;
         _size.text = $"Taille : " + data.pokeInfo.size.ToString() + " m";
         _weight.text = $"Poids : " + data.pokeInfo.weight.ToString() + " kg";
-        _type.text = $"Type Res : " + data.pokeInfo.resType + ", Type Weak : " + data.pokeInfo.weakType;
-        _caption.text = data.pokeInfo.caption;
+        _type.text = $"Type Pokémon : " + data.pokeInfo.types;
+        _caption.text = data.caption;
         
         _pv.text = $"Pv : " + data.statsBase.pv.ToString();
         _atk.text = $"Attack : " + data.statsBase.atk.ToString();
@@ -102,75 +78,28 @@ public class PokemonInfoController : MonoBehaviour
         _defSpe.text = $"Defense Special : " + data.statsBase.defSpe.ToString();
         _speed.text = $"Speed : " + data.statsBase.speed.ToString();
     }
-    
-    private void TakeDamage(int damage, string type)
+
+    public void choosePokemon()
     {
-        if (currentLife > 0)
+        if (_databaseMgr._database.datas[id].pokeInfo.isSelected == false)
         {
-            if(damage <= 0)
+            _databaseMgr._database.datas[id].pokeInfo.isSelected = true;
+            _pokemonSelected.Add(_databaseMgr._database.datas[id]);
+
+            if (_pokemonSelected.Count > 2)
             {
-                Debug.Log("Les damage ne peuvent pas être négatif.");
+                Debug.Log("You can't add more than 2 Pokémon !");
+                fiche.gameObject.SetActive(false);
+                battle.gameObject.SetActive(true);
             }
             else
             {
-                if (Array.Exists(_data.pokeInfo.weakType, element => element == type))
-                {
-                    currentLife -= damage * 2;
-                }
-                else if(Array.Exists(_data.pokeInfo.resType, element => element == type))
-                {
-                    currentLife -= damage / 2;
-                }
-                else
-                {
-                    currentLife -= damage;
-                }
-            }   
+                Debug.Log($"{_databaseMgr._database.datas[id].name} à été séléctionné.");
+            }
         }
-
-        if (currentLife <= 0)
+        else
         {
-           Debug.Log("Le pokémon est mort.");
+            _databaseMgr._database.datas[id].pokeInfo.isSelected = false;
         }
-
-        if (damage > currentLife)
-        {
-            currentLife = 0;
-        }
-    }
-
-    private void AttackOpponent(PokemonData data)
-    {
-        if (currentLife > 0 && _databaseMgr.GetData(2).statsBase.pv > 0)
-        {
-            TakeDamage(data.statsBase.atk, pokeType.Plante.ToString());
-        }
-
-        if (currentLife <= 0)
-        {
-            Debug.Log("Votre Pokémon ne peut plus attaquer !");
-        }
-    }
-    
-    private void InitCurrentLife(PokemonData data)
-    {
-        currentLife = data.statsBase.pv;
-    }
-
-    private void InitStatsPoint(PokemonData data)
-    {
-        statPoint = data.statsBase.pv + data.statsBase.atk + data.statsBase.def;
-    }
-
-    private bool IsPokemonAlive()
-    {
-        return currentLife <= 0;
-    }
-
-    private IEnumerator DelayAttack()
-    {
-        
-        yield return new WaitForSeconds(1.25f);
-        AttackOpponent(_data);
     }
 }
